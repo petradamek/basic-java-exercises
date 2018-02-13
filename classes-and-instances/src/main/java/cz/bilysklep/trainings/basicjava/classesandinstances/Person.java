@@ -32,9 +32,6 @@ public class Person {
     //
     //     <name>, born <dateOfBirth>
 
-    // a9. implement setName(String name) method
-
-
     // b1. add attribute "dateOfDeath" with type "LocalDate"
 
     // b2. implement new constructor (keep the old one) which will initialize all three attributes

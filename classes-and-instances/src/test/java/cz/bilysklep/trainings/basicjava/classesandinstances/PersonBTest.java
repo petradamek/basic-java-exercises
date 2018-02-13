@@ -240,38 +240,4 @@ public class PersonBTest {
 
     }
 
-    @Test
-    //@Ignore
-    public void a5setName() throws Throwable {
-        Person john = personClass.newInstance(
-                "John Wick", LocalDate.of(1964, Month.SEPTEMBER, 2));
-        personClass.callPublicMethod(john, "setName", void.class, "Keanu Reeves");
-        assertEquals("Keanu Reeves",
-                personClass.callPublicMethod(john, "getName", String.class));
-    }
-
-    @Test
-    public void a6getDateOfBirth() throws Throwable {
-        Person john = personClass.newInstance(
-                "John Wick", LocalDate.of(1964, Month.SEPTEMBER, 2));
-        assertEquals(LocalDate.of(1964, Month.SEPTEMBER, 2),
-                personClass.callPublicMethod(john, "getDateOfBirth", LocalDate.class));
-    }
-
-    @Test
-    public void a7getAge() throws Throwable {
-        Person john = personClass.newInstance(
-                "John Wick", LocalDate.of(1964, Month.SEPTEMBER, 2));
-        assertEquals((Integer) 53,
-                personClass.callPublicMethod(john, "getAge", int.class, LocalDate.of(2018, Month.FEBRUARY, 11)));
-    }
-
-    @Test
-    public void a8toString() throws Throwable {
-        Person john = personClass.newInstance(
-                "John Wick", LocalDate.of(1964, Month.SEPTEMBER, 2));
-        assertEquals("John Wick, born 1964-09-02",
-                personClass.callPublicMethod(john, "toString", String.class));
-    }
-
 }
