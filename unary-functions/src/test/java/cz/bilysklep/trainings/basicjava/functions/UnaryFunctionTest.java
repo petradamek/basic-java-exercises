@@ -7,7 +7,7 @@ public class UnaryFunctionTest {
 
     void assertFunction(UnaryFunction function, double delta,
             double[] xValues, double[] yValues) {
-
+        
         for (int i = 0; i < xValues.length; i++) {
             if (Double.isNaN(yValues[i])) {
                 assertFalse("Function [" + function + "] should not be defined "
